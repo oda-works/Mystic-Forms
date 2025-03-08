@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Aplicación - Mystic Network</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7a18, #af002d, #1d2b64); /* Gradiente de colores */
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .welcome {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .container input, .container select, .container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        .container button:hover {
+            background-color: #45a049;
+        }
+
+        /* Animación del fondo */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .container button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h1>¡Bienvenido al Formulario de Aplicación!</h1>
+            <p>Gracias por tu interés en unirte al equipo de <strong>Mystic Network</strong>. A continuación encontrarás una serie de preguntas para conocer más sobre ti y tu experiencia. ¡Buena suerte!</p>
+        </div>
+
+        <form id="applyForm">
+            <label for="experiencia">1. ¿Tienes experiencia previa como staff en otros servidores? Si es así, ¿qué roles desempeñaste y cómo contribuiste al servidor?</label>
+            <textarea id="experiencia" name="experiencia" required></textarea>
+
+            <label for="años">¿Cuántos años de experiencia tienes jugando a Minecraft?</label>
+            <input type="number" id="años" name="años" required>
+
+            <label for="conocimiento">2. ¿Cuáles son las mecánicas o características más importantes que un moderador debe conocer en Minecraft?</label>
+            <textarea id="conocimiento" name="conocimiento" required></textarea>
+
+            <label for="plugins">¿Estás familiarizado con los plugins y comandos que se usan en el servidor?</label>
+            <input type="text" id="plugins" name="plugins" required>
+
+            <label for="situacion">3. ¿Cómo manejarías una situación donde un jugador está haciendo trampa en el servidor?</label>
+            <textarea id="situacion" name="situacion" required></textarea>
+
+            <label for="acoso">¿Qué harías si un jugador reporta a otro por acoso o lenguaje inapropiado?</label>
+            <input type="text" id="acoso" name="acoso" required>
+
+            <label for="bug">Si ves a alguien explotando un bug en el servidor, ¿cómo actuarías?</label>
+            <textarea id="bug" name="bug" required></textarea>
+
+            <label for="respeto">4. ¿Cómo reaccionarías si un jugador te falta al respeto o se muestra agresivo hacia ti mientras moderas?</label>
+            <textarea id="respeto" name="respeto" required></textarea>
+
+            <label for="conflicto">¿Cómo manejarías un conflicto entre jugadores? ¿Qué métodos usarías para calmar la situación?</label>
+            <input type="text" id="conflicto" name="conflicto" required>
+
+            <label for="compromiso">5. ¿Cuánto tiempo puedes dedicar semanalmente al servidor como moderador?</label>
+            <input type="text" id="compromiso" name="compromiso" required>
+
+            <label for="horarios">¿En qué horarios sueles estar disponible para moderar?</label>
+            <input type="text" id="horarios" name="horarios" required>
+
+            <label for="trabajo">6. ¿Cómo prefieres trabajar dentro de un equipo de staff? ¿Qué roles o tareas crees que se ajustan mejor a ti?</label>
+            <textarea id="trabajo" name="trabajo" required></textarea>
+
+            <label for="desacuerdo">¿Cómo manejarías una situación en la que no estás de acuerdo con otro miembro del equipo de moderación?</label>
+            <input type="text" id="desacuerdo" name="desacuerdo" required>
+
+            <label for="tecnicos">7. ¿Tienes experiencia con la administración de servidores de Minecraft o con plugins como WorldEdit, Essentials, etc.?</label>
+            <textarea id="tecnicos" name="tecnicos"></textarea>
+
+            <label for="permisos">¿Sabes cómo manejar el sistema de permisos y configuraciones de un servidor?</label>
+            <input type="text" id="permisos" name="permisos"></input>
+
+            <label for="motivacion">8. ¿Por qué deseas ser parte del equipo de staff de este servidor?</label>
+            <textarea id="motivacion" name="motivacion" required></textarea>
+
+            <label for="destacar">¿Qué te hace destacar de otros candidatos para este rol?</label>
+            <input type="text" id="destacar" name="destacar" required>
+
+            <label for="falsas">9. Si un jugador te acusa falsamente de hacer trampa o de abusar de tu poder, ¿cómo manejarías esa situación?</label>
+            <textarea id="falsas" name="falsas" required></textarea>
+
+            <label for="staff_inapropiado">Si un miembro del staff actúa de manera inapropiada, ¿cómo lo manejarías?</label>
+            <input type="text" id="staff_inapropiado" name="staff_inapropiado" required>
+
+            <button type="submit">Enviar Aplicación</button>
+        </form>
+    </div>
+
+    <script>
+        // URL del webhook de Discord
+        const webhookURL = 'https://discord.com/api/webhooks/1347992343009165432/9A7L-g1zC6Rq5sA66SeIdMMKPstyFZidHn00z8Hgr-tBDypOY37PuxrXl3X14XdE-hWr';
+
+        // Cuando se envía el formulario
+        document.getElementById('applyForm').addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevenir envío de formulario tradicional
+
+            // Obtener los valores del formulario
+            const experiencia = document.getElementById('experiencia').value;
+            const años = document.getElementById('años').value;
+            const conocimiento = document.getElementById('conocimiento').value;
+            const plugins = document.getElementById('plugins').value;
+            const situacion = document.getElementById('situacion').value;
+            const acoso = document.getElementById('acoso').value;
+            const bug = document.getElementById('bug').value;
+            const respeto = document.getElementById('respeto').value;
+            const conflicto = document.getElementById('conflicto').value;
+            const compromiso = document.getElementById('compromiso').value;
+            const horarios = document.getElementById('horarios').value;
+            const trabajo = document.getElementById('trabajo').value;
+            const desacuerdo = document.getElementById('desacuerdo').value;
+            const tecnicos = document.getElementById('tecnicos').value;
+            const permisos = document.getElementById('permisos').value;
+            const motivacion = document.getElementById('motivacion').value;
+            const destacar = document.getElementById('destacar').value;
+            const falsas = document.getElementById('falsas').value;
+            const staff_inapropiado = document.getElementById('staff_inapropiado').value;
+
+            // Crear mensaje para enviar al webhook
+            const message = {
+                content: 'Nueva Aplicación de Staff @everyone :',
+                embeds: [{
+                    title: 'Aplicación de Staff - Mystic Network',
+                    fields: [
+                        { name: 'Experiencia Previa', value: experiencia },
+                        { name: '¿Cuántos años de experiencia tienes jugando a Minecraft?', value: años },
+                        { name: 'Conocimiento del Juego', value: conocimiento },
+                        { name: 'Plugins y Comandos', value: plugins },
+                        { name: 'Situación de Trampas', value: situacion },
+                        { name: 'Acoso y Lenguaje Inapropiado', value: acoso },
+                        { name: 'Manejo de Bugs', value: bug },
+                        { name: 'Reacción al Respeto', value: respeto },
+                        { name: 'Manejo de Conflictos', value: conflicto },
+                        { name: 'Compromiso y Disponibilidad', value: compromiso },
+                        { name: 'Horarios Disponibles', value: horarios },
+                        { name: 'Trabajo en Equipo', value: trabajo },
+                        { name: 'Desacuerdo con el Staff', value: desacuerdo },
+                        { name: 'Habilidades Técnicas', value: tecnicos },
+                        { name: 'Manejo de Permisos', value: permisos },
+                        { name: 'Motivación para Aplicar', value: motivacion },
+                        { name: '¿Qué te hace destacar?', value: destacar },
+                        { name: 'Manejo de Acusaciones Falsas', value: falsas },
+                        { name: 'Manejo de Staff Inapropiado', value: staff_inapropiado }
+                    ]
+                }]
+            };
+
+            // Enviar mensaje al webhook de Discord
+            await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(message)
+            });
+
+            // Mostrar mensaje de confirmación al usuario
+            alert('¡Tu aplicación ha sido enviada exitosamente!');
+            document.getElementById('applyForm').reset(); // Limpiar el formulario
+        });
+    </script>
+</body>
+</html>
